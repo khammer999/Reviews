@@ -17,9 +17,9 @@ namespace ReviewSite
 
         public ReviewRepository()
         {
-            allReviews.Add(1, reviewOne);
-            allReviews.Add(2, reviewTwo);
-            allReviews.Add(3, reviewThree);
+            allReviews.Add(reviewOne.Id, reviewOne);
+            allReviews.Add(reviewOne.Id, reviewTwo);
+            allReviews.Add(reviewOne.Id, reviewThree);
         }
        
 
@@ -29,9 +29,11 @@ namespace ReviewSite
             
         }
 
-        public Dictionary<int,Review> GetAll() //method returns dictionary of all reviews
+        public List<Review> GetAll() //method returns dictionary of all reviews
         {
-            return allReviews;
+
+
+            return allReviews.Values.ToList();
 
         }
 
