@@ -15,10 +15,6 @@ namespace ReviewSite.Models
 
         public object Model { get; set; }
 
-
-
-
-
     }
 
 
