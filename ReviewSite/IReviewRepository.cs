@@ -13,7 +13,7 @@ namespace ReviewSite
     public interface IReviewRepository
     {
         Dictionary <int,Review> GetAll();
-        Review FindById(int id);
+        Review FindOneReviewById(int id);
 
 
 

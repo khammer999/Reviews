@@ -24,7 +24,7 @@ namespace ReviewSite.Controllers
 
         public ViewResult Details(int id)
         {
-            var model = reviewRepo.FindById(id);
+            var model = reviewRepo.FindOneReviewById(id);
             return View(model);
 
         }
