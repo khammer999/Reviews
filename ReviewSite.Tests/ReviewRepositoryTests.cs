@@ -15,19 +15,27 @@ namespace ReviewSite.Tests
             var underTest = new ReviewRepository();
             var result = underTest.GetAll();
 
-            Assert.Equal(3,result.Count);
+            Assert.Equal(3,result.Count); 
         }
 
         [Fact]
-        public void Get_Id_Returns_Id_Field()
+        public void Get_Id_Returns_Review_Title_from_Index()
         {
             var underTest = new ReviewRepository();
-            var result = underTest.FindById(1);
+            var result = underTest.FindOneReviewById(1);
 
             Assert.Equal("War And Peace", result.Title);
 
         }
+        [Fact]
+        public void Get_Id_Returns_Review_Id_from_Index()
+        {
+            var underTest = new ReviewRepository();
+            var result = underTest.FindOneReviewById(2);
+    
+            Assert.Equal(456, result.Id);
 
+        }
 
 
     }

@@ -23,7 +23,7 @@ namespace ReviewSite
         }
        
 
-        public Review FindById(int key)
+        public Review FindOneReviewById(int key)
         {
             return allReviews[key];
             
