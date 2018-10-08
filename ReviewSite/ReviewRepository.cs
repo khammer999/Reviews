@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ReviewSite
 {
-    public class ReviewRepository
+    public class ReviewRepository:IReviewRepository
     {
 
        
